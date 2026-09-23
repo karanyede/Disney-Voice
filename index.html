@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voice Enablement — Sustainment Developer Guide</title>
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+  <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+
+  <div class="site-layout">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1>Voice Learning</h1>
+        <p>CCN MAUI · Sustainment</p>
+      </div>
+      <nav class="nav-group">
+        <div class="nav-group-title">Home</div>
+        <div class="nav-links">
+          <a href="index.html" data-page="index" class="active">Overview</a>
+        </div>
+      </nav>
+      <nav class="nav-group">
+        <div class="nav-group-title">Features</div>
+        <div class="nav-links">
+          <a href="modules/case-management/overview.html" data-page="case-management">Case Management <span class="badge badge-complete">Ready</span></a>
+          <a href="modules/case-management/component-map.html" data-page="component-map">Case Component Map</a>
+          <a href="modules/case-management/omni-routing.html" data-page="omni-routing">Omni Routing</a>
+          <a href="modules/home-dashboard/overview.html" data-page="home-dashboard">Home Dashboard <span class="badge badge-complete">Ready</span></a>
+        </div>
+      </nav>
+      <nav class="nav-group">
+        <div class="nav-group-title">Architecture</div>
+        <div class="nav-links">
+          <a href="modules/architecture/overview.html" data-page="overview">Solution Overview</a>
+          <a href="modules/frameworks/mitchspano.html" data-page="mitchspano">MitchSpano Framework</a>
+          <a href="modules/frameworks/nebula-logger.html" data-page="nebula">Nebula Logger</a>
+          <a href="modules/reference/lwc-apex-catalog.html" data-page="catalog">LWC &amp; Apex Catalog</a>
+        </div>
+      </nav>
+      <nav class="nav-group">
+        <div class="nav-group-title">Voice</div>
+        <div class="nav-links">
+          <a href="modules/outbound/outreach-e2e.html" data-page="outreach">Outbound E2E</a>
+          <a href="modules/voice/voicecall.html" data-page="voicecall">VoiceCall Record Pages</a>
+          <a href="modules/voice/outbound-dialing.html" data-page="dialing">Click-to-Dial &amp; Avaya</a>
+          <a href="modules/voice/transfers.html" data-page="transfers">Transfers &amp; Notes</a>
+          <a href="modules/integrations/external-systems.html" data-page="external">GSS · Passport · UAD · SBC</a>
+          <a href="modules/widgets/utility-bar.html" data-page="widgets">Utility Bar Widgets</a>
+        </div>
+      </nav>
+      <nav class="nav-group">
+        <div class="nav-group-title">Design docs</div>
+        <div class="nav-links">
+          <a href="docs/case-management-architecture.md">Case Architecture (MD)</a>
+          <a href="docs/case-management-design-decisions.md">Case Design Decisions (MD)</a>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="hero">
+        <h1>Voice Enablement — Sustainment Developer Guide</h1>
+        <p>Feature overviews, component maps, and debugging references for CCN MAUI Voice &amp; Outbound Outreach. Find what each capability does, which Apex/LWC implements it, and how it connects to org configuration.</p>
+      </div>
+
+      <h2>Start here</h2>
+      <div class="card-grid">
+        <div class="card card-featured">
+          <h3>Case Management</h3>
+          <p>Outbound Outreach data model, creation paths, triggers, caller search, Omni routing, and voice linkage.</p>
+          <a href="modules/case-management/overview.html"><strong>Feature overview →</strong></a>
+          <br><a href="modules/case-management/component-map.html">Component map (function → Apex/LWC)</a>
+        </div>
+        <div class="card card-featured">
+          <h3>Omni Routing &amp; Queues</h3>
+          <p>Public groups, queue membership, capacity, skills, and what Apex does vs what Omni-Channel does.</p>
+          <a href="modules/case-management/omni-routing.html"><strong>Omni routing →</strong></a>
+        </div>
+        <div class="card card-featured">
+          <h3>Home Page Dashboard</h3>
+          <p>HttpService framework, integration metadata, widget call chains, cache/TTL, permissions.</p>
+          <a href="modules/home-dashboard/overview.html"><strong>Home dashboard →</strong></a>
+        </div>
+      </div>
+
+      <h2>Module map</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Case Management <span class="badge badge-complete">Complete</span></h3>
+          <p>Triggers, Apex, LWCs, bulk import, duplicate prevention, debugging.</p>
+          <a href="modules/case-management/overview.html">Overview →</a>
+        </div>
+        <div class="card">
+          <h3>Case Component Map <span class="badge badge-complete">Complete</span></h3>
+          <p>24-row master table: functionality → LWC → Apex → metadata.</p>
+          <a href="modules/case-management/component-map.html">Open map →</a>
+        </div>
+        <div class="card">
+          <h3>Home Dashboard <span class="badge badge-complete">Complete</span></h3>
+          <p>HttpService, integration metadata, widgets, cache, permissions.</p>
+          <a href="modules/home-dashboard/overview.html">Overview →</a>
+        </div>
+        <div class="card">
+          <h3>Solution Architecture <span class="badge badge-planned">Stub</span></h3>
+          <p>Metadata-driven LWC, Aura wrappers, custom settings, deeplinks.</p>
+          <a href="modules/architecture/overview.html">View →</a>
+        </div>
+        <div class="card">
+          <h3>MitchSpano Framework <span class="badge badge-planned">Stub</span></h3>
+          <p>Trigger Actions Framework, MetadataTriggerHandler, ordered actions.</p>
+          <a href="modules/frameworks/mitchspano.html">View →</a>
+        </div>
+        <div class="card">
+          <h3>Nebula Logger <span class="badge badge-planned">Stub</span></h3>
+          <p>CCN_Logger patterns, correlation IDs, API call log lookup.</p>
+          <a href="modules/frameworks/nebula-logger.html">View →</a>
+        </div>
+        <div class="card">
+          <h3>LWC &amp; Apex Catalog <span class="badge badge-progress">Seed</span></h3>
+          <p>Searchable index of voice/outbound components and classes.</p>
+          <a href="modules/reference/lwc-apex-catalog.html">Catalog →</a>
+        </div>
+        <div class="card">
+          <h3>Outbound E2E <span class="badge badge-planned">Stub</span></h3>
+          <p>End-to-end outbound flow summary.</p>
+          <a href="modules/outbound/outreach-e2e.html">View →</a>
+        </div>
+        <div class="card">
+          <h3>Click-to-Dial <span class="badge badge-progress">Seed</span></h3>
+          <p>Avaya 1XA, Case record dialing, VoiceCall association.</p>
+          <a href="modules/voice/outbound-dialing.html">View →</a>
+        </div>
+        <div class="card">
+          <h3>Utility Bar Widgets <span class="badge badge-progress">Seed</span></h3>
+          <p>Days Out Planner, LL Pricing, permission pattern, HttpService.</p>
+          <a href="modules/widgets/utility-bar.html">View →</a>
+        </div>
+      </div>
+
+      <h2>Confluence</h2>
+      <div class="callout callout-source">
+        <strong>WDWCCN Space — Contact Center Next MAUI</strong>
+        Canonical architecture and design documents.
+      </div>
+      <ul>
+        <li><a href="https://disneyexperiences.atlassian.net/wiki/spaces/WDWCCN/overview" target="_blank" rel="noopener">WDWCCN Space Home</a></li>
+        <li><a href="https://disneyexperiences.atlassian.net/wiki/spaces/WDWCCN/pages/433564861/Outreach+Outbound+Calls+-+Case+Voice+Enablement" target="_blank" rel="noopener">Outreach Outbound Calls — Case | Voice Enablement</a></li>
+        <li><a href="https://disneyexperiences.atlassian.net/wiki/spaces/WDWCCN/pages/440143618/Bulk+Import+Outbound+Outreach+Cases+R2" target="_blank" rel="noopener">Bulk Import R2</a></li>
+        <li><a href="https://disneyexperiences.atlassian.net/wiki/spaces/WDWCCN/pages/464128650/Outbound+Calling+Dialing+Rules+Avaya+Salesforce+Voice+Widget+and+Case+Record" target="_blank" rel="noopener">Outbound Calling Dialing Rules</a></li>
+      </ul>
+
+      <footer class="page-footer">
+        <p>Source: <code>WDW R2 Latest/force-app/main/default</code> · Design docs: <code>docs/</code> · Epic <a href="https://disneyexperiences.atlassian.net/browse/CCNMAUI-1253" target="_blank" rel="noopener">CCNMAUI-1253</a></p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="assets/js/nav.js"></script>
+</body>
+</html>
+
